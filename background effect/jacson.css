@@ -1,0 +1,22 @@
+body{
+    background-image:linear-gradient(to right,purple,pink);
+}
+h1{
+    background-color: aliceblue;
+    text-align: center;}
+    p{background-color: lightyellow;
+        text-align: center;
+        height: 50px;
+        width: 400px;
+        border-radius:20px;
+        animation: twinkle 1s infinite alternate;
+    }
+    @keyframes twinkle{
+       from {background-color:rgb(163, 21, 176);}
+       to{background-color:plum;}
+    }
+    #data{
+        color: burlywood;
+    }
+    .to{color: brown;
+    }
