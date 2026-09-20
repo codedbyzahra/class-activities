@@ -1,0 +1,22 @@
+#nav{
+    position: sticky;
+    display: flex;
+    gap: 15px;
+    top: 0;
+}
+#click{
+    position: static;
+    padding: 15px;
+    margin-top: 25px;
+    left: 60px;
+}
+#relate{
+    position: relative;
+    left: 100px;
+    top: 15px;
+
+}
+#fix{
+    position: fixed;
+    left: 40px;
+}
