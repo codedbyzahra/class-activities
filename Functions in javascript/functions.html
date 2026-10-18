@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Functions In Javascript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Functions in Javascript</h1>
+        <ul>
+            <li>Prameters</li>
+            <li>Return</li>
+            <li>Function Calling</li>
+        </ul>
+        <button onclick="counting()">CLICK</button>
+        <p id="d"></p>
+        <button onclick="result(10,2)">BLO UP</button>
+        <p id="c"></p>
+        <script>
+            document.write("Function there Calling you")
+            function counting (){
+                a=9
+                b=10
+                document.getElementById("d").innerHTML=a*b;
+            }
+            function result (a,c){
+                document.getElementById("c").innerHTML=a*c;
+            }
+        </script>
+    </body>
+</html>
