@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Introductions to Objects In Javascript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Student info</h2>
+                <h4>Name: <span id="name"></span></h4>
+                <h4>Phone no: <span id="phone no"></span></h4>
+                <h4>Roll No: <span id="roll no"></span></h4>
+                <h4>Degree: <span id="degree"></span></h4>
+                <h3>Whole data is:</h3>
+                <p id="all"></p>
+
+            </div>
+        </div>
+       
+        
+        <script>
+            var student={
+                Name:"Zahra",
+                phoneno:"0300000000",
+                rollno:"12345",
+                degree:"Microbiology"
+            }
+            var nameEl=documemt.getElementById("name")
+            nameEl.textContent=student.name; 
+            var phoneE=document.getElementById("phone")
+            phoneE.textContent= student.phone;
+            var rollE=document.getElementbyId("roll")
+            rollE.textContent= student["roll"]
+            var degreeE=document.getElementById("degree")
+            degreeE.textContent= student ["degree"]
+
+            var all=documnet.getElementById("all")
+            all.textContent=
+            "name:" + student.name +"\n" +
+            "phone no:" + student.phone + "\n" +
+            "roll no:" +student.roll + "\n"+
+            "degree:"  +student.degree + "\n"
+        </script>
+    </body>
+</html>
