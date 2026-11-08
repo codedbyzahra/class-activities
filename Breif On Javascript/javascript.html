@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Game Profile</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>My Game Profile</h1>
+        <div>Name:<span id="name"></span></div>
+        <div>myScore:<span id="myScore"></span></div>
+        <div>highscore:<span id="highscore"></span></div>
+        <div>team:<span id="team"></span></div>
+        <button onclick="showprofile()">
+            Open The Game
+        </button>
+        <p id="staus"></p>
+        <script>
+         function showprofile(){
+            let isTopscore=myScore==highscore;
+            let rank;
+            let name= Zahra;
+            let myScore= 70;
+            let highscore= 100;
+            let team;
+            if (myScore >=80){
+                rank="Platinum"
+            }
+            else if(myScore >=70){
+                rank="Diamond"
+            }
+            else if(myScore >=50){
+                rank="Gold"
+            }
+            else {
+                rank="Bronze"
+            }
+            
+
+            document.getElementById("name").innerHTML="Zahra"
+            document.getElementById("myScore").innerHTML="70"
+            document.getElementById("highscore").innerHTML="100"
+            document.getElementById("team").innerHTML=""
+            document.getElementById("game-status").innerHTML=document.title +" is now open";
+
+         }
+        </script>
+    </body>
+</html>
