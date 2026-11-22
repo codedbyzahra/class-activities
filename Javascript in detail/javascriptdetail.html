@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript in Detail</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        
+        <script>
+           var sen= "The dragon flew over the big castle."
+           function checktypes(){
+            document.getElementById(typeresult).innerText=
+            "Score 42 -type:" + typeof 45 + "/n"
+            "Name 'Alex' -type:" + typeof Alex + "/n"
+            "Game over true -type:" + typeof true + "/n"
+            "Score 999.999 -type" + typeof 999.999 + "/n"
+           }
+           function toStr(){
+            var v =document.getElementById("numIn").value;
+            document.getElementById("convResult").innerHTML= "String ("+ v +") "+ String(v)+ " 'now it is a:'" + typeof String (v);
+           }
+           function toNum(){
+            var v= document.getElementById("numIn").value;
+            document.getElementById("convResult").innerHTML= "Number('"+ v +'") = " + Number(v)+ "- now it is a:" + typeof Number (v);
+           }
+           function dosearch(){
+            var w = document.getElementById("findW").value;
+            var p = sen.search(w);
+            document.getElementById("srResult").innerHTML=
+            p=== -1 ? "'" + w + "' is not in the sentence -try another word!" : "Found '" + w + "' hiding at position" + p + "!";
+
+           }
+           function doreplace () {
+            var w = document.getElementById("findW").value;
+            document.getElementById("srResult").innerHTML= "New sentence:" + sen.replace(w, document.getElementById("swapW").value);
+           }
+           function trysafe(){
+            try{
+                var n = document.getElementById("divIn").value;
+                if (n=== "" || isNan(n)) { throw "That is not a number - you caught the error!";}
+        
+            }
+           }
+
+        </script>
+    </body>
+</html>
