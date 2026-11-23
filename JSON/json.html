@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JSON and JS Asunchronous</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>My Delivery Tracker</h1>
+        <button onclick="saveOrder()">Save Order</button>
+        <button onclick="startDelivery()">Start Delivery</button>
+
+        <div>JSON Text: <span id="json-text"></span></div>
+        <div>JSON Item: <span id="loaded-item"></span></div>
+        <div>JSON Price: <span id="loaded-price"></span></div>
+        <div>Status: <span id="status"></span></div>
+        <div>Result: <span id="result"></span></div>
+
+        <script>
+            let order = {
+                item: "Pizza",
+                price: "5",
+                shop: "My Snack Shop"
+            };
+            function saveOrder(){
+                let jsonText = JSON.stringify(order);
+                let loadedOrder = JSON.parse(jsonText);
+                document.getElementById("json-text").innerHTML = jsonText;
+                document.getElementById("loaded-item").innerHTML = loadedOrder.item;
+                document.getElementById("loaded-price").innerHTML = "$" + loadedOrder.price;
+            }
+            function delay(ms){
+                return new Promise (function(resolve) {
+                    setTimeout(resolve, ms);
+                });
+            }
+            async function startDelivery() {
+                document.getElementById("result").innerHTML= "";
+                document.getElementById("status").innerHTML= "Order received!"
+                setTimeout(function(){
+                    document.getElementById("status").innerHTML= "Kitchen is preparing..."
+                }, 1000);
+                await delay (3000);
+                document.getElementById("status").innerHTML= "Out for delivery"
+                await delay(2000);
+                document.getElementById("result").innerHTML= "Your order has received!"
+                
+            }
+        </script>
+    </body>
+</html>
